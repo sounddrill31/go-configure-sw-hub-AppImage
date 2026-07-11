@@ -12,10 +12,13 @@ export ICON=/usr/share/icons/hicolor/512x512/apps/icon-launcher-dev.png
 export DESKTOP=/usr/share/applications/GreenPAK_designer_launcher.desktop
 
 # Deploy dependencies
+
 quick-sharun \
-    /usr/local/go-configure-sw-hub/bin/GPLauncher
+    /usr/bin/GPLauncher
 
 # Additional changes can be done in between here
+mkdir -p ./AppDir/usr/local/go-configure-sw-hub
+cp -vr /usr/local/go-configure-sw-hub/* ./AppDir/usr/local/go-configure-sw-hub
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
